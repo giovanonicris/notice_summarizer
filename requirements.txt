@@ -1,0 +1,5 @@
+vaderSentiment
+nltk
+beautifulsoup4
+pandas
+requests
