@@ -16,6 +16,8 @@ from sumy.summarizers.text_rank import TextRankSummarizer
 ## SET UP
 # download nltk tokenizer
 download('punkt')
+download('punkt_tab')  # be explicit to work in GitHub Actions
+
 
 # sentiment analyzer
 analyzer = SentimentIntensityAnalyzer()
