@@ -3,3 +3,7 @@ nltk
 beautifulsoup4
 pandas
 requests
+selenium
+webdriver-manager
+pdfminer.six
+sumy
