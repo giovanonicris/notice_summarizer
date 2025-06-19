@@ -100,13 +100,13 @@ for notice_id in notice_ids:
                 except Exception as e:
                     print(f"Failed to extract HTML from {href}: {e}")
                     continue
-
-
             score = analyzer.polarity_scores(comment_text)
             summary = textrank_summary(comment_text)
-
             detailed_rows.append({
                 "notice_id": notice_id,
+                "notice_id_slug": slug,
+                "comment_id": href.split("/")[-1],
+                "comment_link": href,
                 "commenter": commenter_text,
                 "date": date_text,
                 "comment_text": comment_text,
@@ -135,7 +135,7 @@ for notice_id in notice_ids:
             })
 
     except Exception as e:
-        print(f"ERROR! Failed to process {notice_id}:")
+        print(f"ERROR!! Failed to process {notice_id}:")
         traceback.print_exc()
 
 # save output!!
